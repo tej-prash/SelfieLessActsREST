@@ -11,3 +11,6 @@ Client --> VM1(Renders Webpages) --> VM2(REST API)
 Instructions for running: <br/>
 Run python3 app_rest.py for running the REST API. Requests can be made only to the REST API <br/>
 Run python3 app_backend.py for running the backend. app_rest.py must be run along with this since it makes requests to it. <br/>
+
+Dependendies: <br/>
+Flask Web Framework needs to be setup in order to run this  <br/>
