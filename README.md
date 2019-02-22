@@ -8,6 +8,6 @@ templates- Folder that contains html files to be rendered <br/>
 Architecture: <br/>
 Client --> VM1(Renders Webpages) --> VM2(REST API)
 
-Instructions for running:
-Run python3 app_rest.py for running the REST API. Requests can be made only to the REST API
-Run python3 app_backend.py for running the backend. app_rest.py must be run along with this since it makes requests to it. 
+Instructions for running: <br/>
+Run python3 app_rest.py for running the REST API. Requests can be made only to the REST API <br/>
+Run python3 app_backend.py for running the backend. app_rest.py must be run along with this since it makes requests to it. <br/>
