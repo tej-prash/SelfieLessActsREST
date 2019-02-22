@@ -1,0 +1,18 @@
+<html>
+<body bgcolor="cyan">
+<h1 align="center"><font color="blue" face="verdana">SELFIELESS ACTS</h1><br>
+<h3 align="center"><font color="blue" face="verdana">{{ category }} </h3> <br>
+{% if error %}
+<h3 align="center"><font color="blue" face="verdana">{{ error }} </h3> <br>
+{% endif %}
+{% for item in data %}
+    <p> Act ID: {{ item["actId"] }}</p>
+    <p> Time: {{ item["timestamp"] }} </p>
+    <p> Description: {{item["caption"] }} </p>
+    <p> Upvotes: {{ item["upvotes"] }} </p>
+    <p> Username: {{ item["username"] }}</p>
+    <button type="button" onclick="window.location.href='{{url_for('upvote_wrapper',id=item['actId'],category=category)}}'">Upvote</button><br>
+    <img src="data:image/png;base64,{{item['imageB64']}}">
+{% endfor %}
+</body>
+</html>

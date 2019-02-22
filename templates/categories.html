@@ -1,0 +1,27 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+<div bgcolor="cyan">
+<h1 align="center"><font color="blue" face="verdana">SELFIELESS ACTS</font></h1><br>
+{% for item in data %}
+<a href="{{ url_for('category',name=item) }}"> <h4 align="center"><font color="blue" face="verdana">{{ item }}</font></h4><br> </a>
+{% endfor %}
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
+<form id="form_act" action="actSubmit" method="post" enctype="multipart/form-data" target="_blank">
+        <textarea name="description" rows="8" cols="80"></textarea>
+        <br>Upload an image:
+        <input type="file" name="file"><br>
+        <br>
+        Enter a category: <input type="text" name="category"></input><br>
+        Username: <input type="text" name="username"> <br>
+        <input type="submit" name="post" value="Post"> <br>
+</form>
+{% if error %}
+<p id="status"><b>{{error }}</p>
+{% endif %}
+
+{% if success %}
+<p><b>{{ success }}</p>
+{% endif %}
+</body>
+</html>
