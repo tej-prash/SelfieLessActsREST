@@ -1,9 +1,9 @@
 # SelfieLessActsREST
-A REST API for SelfieLessActs project
+A REST API for SelfieLessActs project <br/>
 
-app_rest.py contains the python code that implements the REST API. This is present on VM2
-app_backend.py contains python code for rendering webpages. This communicates with the REST API to obtain information. This is present on VM1
-templates- Folder that contains html files to be rendered
+app_rest.py contains the python code that implements the REST API. This is present on VM2 <br/>
+app_backend.py contains python code for rendering webpages. This communicates with the REST API to obtain information. This is present on VM1 <br/>
+templates- Folder that contains html files to be rendered <br/>
 
-Architecture:
+Architecture: <br/>
 Client --> VM1(Renders Webpages) --> VM2(REST API)
